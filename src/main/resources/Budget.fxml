@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.pa.jbudget105532.View.JavaFx.JavaFxBudget">
+    <children>
+        <AnchorPane prefHeight="443.0" prefWidth="600.0">
+            <children>
+                <Button fx:id="account" layoutX="155.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeSceneAccount" prefHeight="32.0" prefWidth="137.0" text="ACCOUNT" />
+                <Button fx:id="home" layoutX="455.0" layoutY="14.0" mnemonicParsing="false" onAction="#goHome" prefHeight="32.0" prefWidth="137.0" text="HOME" />
+                <Button fx:id="category" layoutX="307.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeSceneCategory" prefHeight="32.0" prefWidth="137.0" text="CATEGORY" />
+                <Button fx:id="transaction" layoutX="8.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeSceneTransaction" prefHeight="32.0" prefWidth="137.0" text="TRANSACTION" />
+            <ComboBox fx:id="category_new" layoutX="419.0" layoutY="190.0" prefWidth="150.0" />
+            <ListView fx:id="showBudgets" layoutX="14.0" layoutY="89.0" onMouseClicked="#selectBudget" prefHeight="286.0" prefWidth="241.0" />
+            <Button fx:id="showProgress" layoutX="268.0" layoutY="348.0" mnemonicParsing="false" onAction="#showProgress" text="VIEW PROGRESS" />
+            <Button fx:id="newBudget" layoutX="524.0" layoutY="251.0" mnemonicParsing="false" onAction="#newBudget" text="NEW" />
+            <Button fx:id="modifyBudget" layoutX="268.0" layoutY="219.0" mnemonicParsing="false" onAction="#modifyBudget" text="MODIFY" />
+            <Button fx:id="deleteBudget" layoutX="269.0" layoutY="281.0" mnemonicParsing="false" onAction="#removeBudget" text="DELETE" />
+            <TextArea fx:id="amount_new" layoutX="391.0" layoutY="117.0" prefHeight="43.0" prefWidth="190.0" />
+            <Separator layoutX="370.0" layoutY="71.0" orientation="VERTICAL" prefHeight="179.0" prefWidth="4.0" />
+            <Label fx:id="errorAmount_new" layoutX="393.0" layoutY="167.0" prefHeight="9.0" prefWidth="190.0" textFill="RED" />
+            <Label fx:id="errorCategory_new" layoutX="377.0" layoutY="224.0" prefWidth="219.0" textFill="RED" />
+            <Label fx:id="errorModify" layoutX="262.0" layoutY="256.0" prefHeight="17.0" prefWidth="190.0" textFill="RED" />
+            <Label fx:id="errorDelete" layoutX="262.0" layoutY="321.0" prefHeight="8.0" prefWidth="190.0" textFill="RED" />
+            <Label fx:id="errorProgress" layoutX="262.0" layoutY="378.0" prefHeight="17.0" prefWidth="190.0" textFill="RED" />
+            <Label layoutX="393.0" layoutY="89.0" prefHeight="17.0" prefWidth="150.0" text="Insert Amount:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorBudgetCreation_new" layoutX="421.0" layoutY="286.0" prefWidth="150.0" textFill="RED" />
+            <Label layoutX="269.0" layoutY="91.0" text="Selected budget" />
+            <Label fx:id="budgetInformation" layoutX="269.0" layoutY="117.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

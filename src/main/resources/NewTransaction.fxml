@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import org.controlsfx.control.CheckComboBox?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unicam.cs.pa.jbudget105532.View.JavaFx.JavaFxTransaction">
+   <children>
+      <AnchorPane prefHeight="277.0" prefWidth="382.0">
+         <children>
+            <Label layoutX="37.0" layoutY="14.0" text="CREATE NEW TRANSACTION">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="78.0" layoutY="71.0" text="DATE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <CheckComboBox fx:id="categories_newTransaction" layoutX="160.0" layoutY="132.0" prefHeight="17.0" prefWidth="180.0" />
+            <Label layoutX="28.0" layoutY="134.0" text="CATEGORY">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="create_newTransaction" layoutX="68.0" layoutY="235.0" mnemonicParsing="false" onAction="#newTransaction_newTransaction" prefHeight="29.0" prefWidth="65.0" text="CREATE" />
+            <Button fx:id="back_new" layoutX="242.0" layoutY="236.0" mnemonicParsing="false" onAction="#changeSceneTransaction" text="BACK" />
+            <Label fx:id="errorDate_newTransaction" layoutX="166.0" layoutY="103.0" prefHeight="17.0" prefWidth="180.0" textFill="RED" />
+            <DatePicker fx:id="date_newTransaction" layoutX="160.0" layoutY="69.0" onAction="#checkType" />
+            <RadioButton fx:id="isScheduled_newTransaction" layoutX="178.0" layoutY="182.0" mnemonicParsing="false" text="IS SCHEDULED" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
